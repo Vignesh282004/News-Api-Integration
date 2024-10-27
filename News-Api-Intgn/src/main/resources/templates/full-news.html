@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${article.title}">Article Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 th:text="${article.title}">Article Title</h1>
+    <img th:src="${article.urlToImage}" class="img-fluid" alt="News Image">
+    <p th:text="${article.description}">Article Description</p>
+    <p th:text="${article.content}">Full content of the article.</p>
+    <a th:href="${article.url}" class="btn btn-primary" target="_blank">Read Full Article</a>
+    <a href="#" class="btn btn-secondary" onclick="window.history.back();">Back</a>
+</div>
+</body>
+</html>

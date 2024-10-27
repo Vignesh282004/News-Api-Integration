@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Latest Tech News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Latest Tech News</h1>
+    <div class="row mt-4">
+        <div class="col-md-4" th:each="article : ${news}">
+            <div class="card mb-4">
+                <img th:src="${article.urlToImage}" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${article.title}">Article Title</h5>
+                    <p class="card-text" th:text="${article.description}">Article Description</p>
+                    <p class="card-text"><small class="text-muted" th:text="'Published at: ' + ${article.publishedAt}">Published at: Date</small></p>
+                    <p class="card-text" th:text="'Author: ' + ${article.author}">Author: Author Name</p>
+                    <a th:href="${article.url}" class="btn btn-primary" target="_blank">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
