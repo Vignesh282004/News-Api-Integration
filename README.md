@@ -13,7 +13,7 @@ A simple web application to fetch and display the latest tech news articles usin
 - **Backend**: Java, Spring Boot
 - **Frontend**: Thymeleaf, HTML, CSS (Bootstrap)
 - **APIs**: [News API](https://newsapi.org/) for fetching articles
-
+- *DEPLOYED ON RENDER* :  (https://news-api-latest.onrender.com/news)
 ## 📥 Installation
 
 To set up this project locally, follow these steps:
